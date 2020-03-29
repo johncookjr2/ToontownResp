@@ -18,7 +18,7 @@ from panda3d.core import Vec3, Vec4, BitMask32
 from direct.gui.OnscreenText import OnscreenText
 from direct.actor.Actor import Actor
 from direct.showbase.DirectObject import DirectObject
-base.setBackgroundColor(0,150,255)
+base.setBackgroundColor(128,128,128)
 # TTC
 
 ttc = loader.loadModel("phase_15/hood/toontown_central.bam")
@@ -48,7 +48,6 @@ tallPumpkin.place()
 
 
 
-
 # Loanshark
 
 LoanShark = Actor('phase_3.5/models/char/suitB-mod.bam', {'victory': 'phase_4/models/char/suitB-victory.bam'})
@@ -73,8 +72,13 @@ LoanShark.place()
 
 
 
-#toonBoi
 
 
+
+
+
+bgm = base.loader.loadSfx("phase_6/audio/bgm/Playground_Music_Halloween_Event.ogg")
+bgm.setLoop(True)
+bgm.play()
 base.oobe()
 run()
